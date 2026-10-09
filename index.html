@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--
+  EVALUACIÓN SEGUNDO MOMENTO · LANDING PAGE EN HTML Y CSS
+  Proyecto: Grupo Jerónimo Financiero
+
+  DATOS DEL PROYECTO
+  Nombre del negocio o proyecto: Grupo Jerónimo Financiero
+  Tipo de negocio: Servicios financieros (créditos y asesoría)
+  Eslogan: Confianza que impulsa tu futuro
+  Color principal: Petróleo (#0B3B3C)   Color secundario: Coral (#FF6B57)
+  Color complementario: Menta (#2FD6A3) Color de fondo: Crema (#FFF3EA)
+  Tipografía de títulos: Bricolage Grotesque   Tipografía de textos: Manrope
+  Público objetivo: docentes, pensionados, fuerza pública, servidores públicos y empresas
+  Ciudad: Medellín   Teléfono: 305 736 5227   Instagram: @grupo_jeronimofinanciero
+  Correo: correo@ejemplo.com  (CAMBIAR por el correo real del negocio)
+-->
+<html lang="es">
+
+<head>
+  <!-- Configuración básica de la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo Jerónimo Financiero · Confianza que impulsa tu futuro</title>
+  <meta name="description" content="Créditos de libranza, hipotecario, vehículo y más, con asesoría personalizada en Medellín.">
+  <link rel="icon" href="imagenes/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografías de la marca (necesitan internet; si no cargan, se usan Helvetica y Arial) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Conexión con el archivo de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <!-- ========== 1. ENCABEZADO: logo y menú (Flexbox) ========== -->
+  <header class="encabezado" id="inicio">
+    <a class="logo" href="#inicio">
+      <img src="imagenes/logo-horizontal-color.svg" alt="Logo de Grupo Jerónimo Financiero: una G en espiral">
+    </a>
+
+    <!-- Menú de navegación -->
+    <nav class="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== 2. HERO: dos columnas (texto + imagen) ========== -->
+    <section class="hero">
+      <div class="hero-contenedor">
+
+        <!-- Columna izquierda: título, texto y botón -->
+        <div class="hero-texto">
+          <p class="hero-tipo">Servicios financieros en Medellín</p>
+          <h1>Tu crédito, a tu medida<span class="punto">.</span></h1>
+          <p class="eslogan">Confianza que impulsa tu futuro</p>
+          <p>
+            Libranza, hipotecario, vehículo y más, con asesoría personalizada de principio a fin
+            para docentes, pensionados, fuerza pública, servidores públicos y empresas.
+          </p>
+          <a class="boton" href="https://wa.me/573057365227" target="_blank">Escríbenos por WhatsApp</a>
+        </div>
+
+        <!-- Columna derecha: imagen -->
+        <div class="hero-imagen">
+          <img src="imagenes/hero-espiral.svg" alt="Espiral de Fibonacci en forma de letra G, símbolo de Grupo Jerónimo Financiero">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 3. NOSOTROS: imagen + texto ========== -->
+    <section class="nosotros" id="nosotros">
+      <div class="nosotros-contenedor">
+
+        <div class="nosotros-imagen">
+          <img src="imagenes/nosotros-asesoria.svg" alt="Un asesor y un cliente conversando sobre un crédito">
+        </div>
+
+        <div class="nosotros-texto">
+          <h2>Nosotros</h2>
+          <h3>¿Quiénes somos?</h3>
+          <p>Somos Grupo Jerónimo Financiero, una firma de asesoría y créditos con sede en Medellín.</p>
+          <h3>¿Qué hacemos?</h3>
+          <p>Te acompañamos a elegir y tramitar créditos de libranza, hipotecario, vehículo y más.</p>
+          <h3>¿A quién ayudamos?</h3>
+          <ul>
+            <li>Docentes del sector público y privado</li>
+            <li>Pensionados</li>
+            <li>Integrantes activos y retirados de la fuerza pública</li>
+            <li>Servidores públicos y empresas</li>
+            <li>Personas reportadas que buscan una nueva oportunidad</li>
+          </ul>
+          <h3>¿Qué nos diferencia?</h3>
+          <p>Un asesor dedicado a tu caso, atención por WhatsApp y condiciones explicadas con claridad.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 4. PRODUCTOS: 6 tarjetas con Flexbox ========== -->
+    <section class="productos" id="productos">
+      <h2>Nuestros productos</h2>
+      <p class="subtitulo">Elige la línea de crédito que va con tu momento.</p>
+
+      <div class="productos-contenedor">
+
+        <!-- Tarjeta 1 -->
+        <article class="producto">
+          <img src="imagenes/producto-libranza.svg" alt="Documento de nómina con una moneda, que representa el crédito de libranza">
+          <h3>Crédito de libranza</h3>
+          <p>Descuento por nómina, con asesoría para elegir la opción que mejor se ajusta a ti.</p>
+          <p class="info">Para empleados con descuento por nómina</p>
+          <a class="boton" href="#contacto">Pedir asesoría</a>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="producto">
+          <img src="imagenes/producto-hipotecario.svg" alt="Casa con un sol, que representa el crédito hipotecario">
+          <h3>Crédito hipotecario</h3>
+          <p>Financia tu vivienda con acompañamiento en cada paso del proceso.</p>
+          <p class="info">Plazo y tasa según estudio de crédito</p>
+          <a class="boton" href="#contacto">Pedir asesoría</a>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="producto">
+          <img src="imagenes/producto-vehiculo.svg" alt="Carro sobre una carretera, que representa el crédito de vehículo">
+          <h3>Crédito de vehículo</h3>
+          <p>Compra tu carro nuevo o usado con un crédito que se adapta a ti.</p>
+          <p class="info">Asesoría para elegir el plan ideal</p>
+          <a class="boton" href="#contacto">Pedir asesoría</a>
+        </article>
+
+        <!-- Tarjeta 4 -->
+        <article class="producto">
+          <img src="imagenes/producto-pensionados.svg" alt="Corazón sobre un círculo, que representa el crédito para pensionados">
+          <h3>Crédito para pensionados</h3>
+          <p>Opciones pensadas para pensionados, con trato cercano y explicaciones claras.</p>
+          <p class="info">Condiciones según estudio de crédito</p>
+          <a class="boton" href="#contacto">Pedir asesoría</a>
+        </article>
+
+        <!-- Tarjeta 5 -->
+        <article class="producto">
+          <img src="imagenes/producto-docentes.svg" alt="Birrete de graduación sobre un libro, que representa el crédito para docentes">
+          <h3>Crédito para docentes</h3>
+          <p>Condiciones especiales para quienes enseñan, tanto en el sector público como en el privado.</p>
+          <p class="info">Para docentes del sector público y privado</p>
+          <a class="boton" href="#contacto">Pedir asesoría</a>
+        </article>
+
+        <!-- Tarjeta 6 -->
+        <article class="producto">
+          <img src="imagenes/producto-empresas.svg" alt="Edificios de oficinas, que representan el crédito para empresas">
+          <h3>Crédito para empresas</h3>
+          <p>Líneas de crédito para empresas privadas y para empleados con convenio.</p>
+          <p class="info">Para empresas y entidades con convenio</p>
+          <a class="boton" href="#contacto">Pedir asesoría</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== 5. SERVICIOS: 3 beneficios con Flexbox ========== -->
+    <section class="servicios" id="servicios">
+      <h2>Nuestros servicios</h2>
+      <p class="subtitulo">Lo que recibes cuando te acompañamos.</p>
+
+      <div class="servicios-contenedor">
+
+        <div class="servicio">
+          <img src="imagenes/icono-asesoria.svg" alt="Icono de una persona con una marca de verificación">
+          <h3>Asesoría personalizada</h3>
+          <p>Un experto dedicado a tu caso, de principio a fin.</p>
+          <a class="boton-borde" href="#contacto">Hablar con un asesor</a>
+        </div>
+
+        <div class="servicio">
+          <img src="imagenes/icono-whatsapp.svg" alt="Icono de un globo de conversación">
+          <h3>Atención por WhatsApp</h3>
+          <p>Escríbenos, cuéntanos qué necesitas y te orientamos.</p>
+          <a class="boton-borde" href="https://wa.me/573057365227" target="_blank">Abrir WhatsApp</a>
+        </div>
+
+        <div class="servicio">
+          <img src="imagenes/icono-confianza.svg" alt="Icono de un escudo con una marca de verificación">
+          <h3>Confianza y transparencia</h3>
+          <p>Te explicamos cada condición antes de que avances.</p>
+          <a class="boton-borde" href="#tabla">Ver los perfiles</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 6. TABLA: perfiles y créditos ========== -->
+    <section class="tabla-seccion" id="tabla">
+      <h2>Perfiles y créditos</h2>
+      <p class="subtitulo">Encuentra el crédito que corresponde a tu perfil.</p>
+
+      <div class="tabla-caja">
+        <table>
+          <thead>
+            <tr>
+              <th>Perfil</th>
+              <th>Crédito</th>
+              <th>¿Para quién es?</th>
+              <th>Cómo empezar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Docentes</td>
+              <td>Libranza para docentes</td>
+              <td>Docentes del sector público y privado</td>
+              <td>Escríbenos por WhatsApp</td>
+            </tr>
+            <tr>
+              <td>Pensionados</td>
+              <td>Crédito para pensionados</td>
+              <td>Personas pensionadas</td>
+              <td>Pide tu asesoría</td>
+            </tr>
+            <tr>
+              <td>Militares y Policía</td>
+              <td>Crédito preferencial</td>
+              <td>Fuerza pública activa y retirada</td>
+              <td>Escríbenos por WhatsApp</td>
+            </tr>
+            <tr>
+              <td>Sector Gobierno</td>
+              <td>Soluciones para servidores públicos</td>
+              <td>Servidores públicos y entidades estatales</td>
+              <td>Pide tu asesoría</td>
+            </tr>
+            <tr>
+              <td>Empresas privadas</td>
+              <td>Líneas corporativas</td>
+              <td>Empresas y empleados con convenio</td>
+              <td>Escríbenos por WhatsApp</td>
+            </tr>
+            <tr>
+              <td>Reportados</td>
+              <td>Crédito para reportados</td>
+              <td>Personas que buscan una nueva oportunidad</td>
+              <td>Pide tu asesoría</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== 7. GALERÍA: 6 imágenes con Flexbox ========== -->
+    <section class="galeria" id="galeria">
+      <h2>Galería</h2>
+      <p class="subtitulo">Lo que puedes lograr con el crédito adecuado.</p>
+
+      <div class="galeria-contenedor">
+        <figure class="galeria-item">
+          <img src="imagenes/galeria-hogar.svg" alt="Casa con un árbol y un sol sobre una colina verde">
+          <figcaption>Tu hogar</figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="imagenes/galeria-vehiculo.svg" alt="Carro circulando por una carretera bajo un sol naranja">
+          <figcaption>Tu vehículo</figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="imagenes/galeria-docentes.svg" alt="Tablero escolar con una espiral dibujada, que representa a los docentes">
+          <figcaption>Tu vocación</figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="imagenes/galeria-ciudad.svg" alt="Edificios de una ciudad al atardecer, que representan a las empresas">
+          <figcaption>Tu empresa</figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="imagenes/galeria-crecimiento.svg" alt="Gráfico de barras que crece con una flecha hacia arriba">
+          <figcaption>Tu crecimiento</figcaption>
+        </figure>
+        <figure class="galeria-item">
+          <img src="imagenes/galeria-asesoria.svg" alt="Dos globos de conversación entre un asesor y un cliente">
+          <figcaption>Tu asesoría</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== 8. CONTACTO: formulario ========== -->
+    <section class="contacto" id="contacto">
+      <div class="contacto-contenedor">
+
+        <div class="contacto-texto">
+          <h2>Contáctanos</h2>
+          <p>Déjanos tus datos y el crédito que te interesa. Un asesor te contactará.</p>
+          <p>También puedes escribirnos por WhatsApp al <strong>305 736 5227</strong>.</p>
+        </div>
+
+        <!-- Nota: sin JavaScript ni servidor, este formulario solo es visual -->
+        <form class="formulario" action="#" method="post">
+
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="300 000 0000">
+
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad">
+
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="servicio">
+            <option value="libranza">Crédito de libranza</option>
+            <option value="hipotecario">Crédito hipotecario</option>
+            <option value="vehiculo">Crédito de vehículo</option>
+            <option value="pensionados">Crédito para pensionados</option>
+            <option value="docentes">Crédito para docentes</option>
+            <option value="empresas">Crédito para empresas</option>
+          </select>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos tu caso"></textarea>
+
+          <button class="boton" type="submit">Enviar</button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== 9. PIE DE PÁGINA ========== -->
+  <footer class="pie-pagina">
+    <div class="pie-contenedor">
+
+      <div class="pie-columna">
+        <img src="imagenes/logo-horizontal-claro.svg" alt="Logo de Grupo Jerónimo Financiero en versión clara">
+        <p><strong>Grupo Jerónimo Financiero</strong></p>
+        <p>Confianza que impulsa tu futuro</p>
+      </div>
+
+      <div class="pie-columna">
+        <h3>Contacto</h3>
+        <p>Ciudad: Medellín, Colombia</p>
+        <p>Teléfono: 305 736 5227</p>
+        <p>Correo: correo@ejemplo.com</p>
+        <p>Instagram: <a href="https://www.instagram.com/grupo_jeronimofinanciero/" target="_blank">@grupo_jeronimofinanciero</a></p>
+      </div>
+
+    </div>
+
+    <p class="derechos">© 2026 Grupo Jerónimo Financiero — Todos los derechos reservados.</p>
+    <p class="aviso">Las condiciones, tasas y montos dependen del estudio de crédito de cada solicitud.</p>
+  </footer>
+
+</body>
+
+</html>
